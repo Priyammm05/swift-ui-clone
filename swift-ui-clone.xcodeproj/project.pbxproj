@@ -14,6 +14,14 @@
 		CA0C3F742BECF78D00D5D2FB /* swift_ui_cloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3F732BECF78D00D5D2FB /* swift_ui_cloneTests.swift */; };
 		CA0C3F7E2BECF78E00D5D2FB /* swift_ui_cloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3F7D2BECF78E00D5D2FB /* swift_ui_cloneUITests.swift */; };
 		CA0C3F802BECF78E00D5D2FB /* swift_ui_cloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3F7F2BECF78E00D5D2FB /* swift_ui_cloneUITestsLaunchTests.swift */; };
+		CA0C3F8F2BECF7C900D5D2FB /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CA0C3F8E2BECF7C900D5D2FB /* SDWebImageSwiftUI */; };
+		CA0C3F922BECF80E00D5D2FB /* ImageLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3F912BECF80E00D5D2FB /* ImageLoaderView.swift */; };
+		CA0C3F942BECF90500D5D2FB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3F932BECF90500D5D2FB /* Constants.swift */; };
+		CA0C3F962BECFB0000D5D2FB /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3F952BECFB0000D5D2FB /* DatabaseHelper.swift */; };
+		CA0C3F982BECFC1E00D5D2FB /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3F972BECFC1E00D5D2FB /* Product.swift */; };
+		CA0C3F9A2BECFCEA00D5D2FB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3F992BECFCEA00D5D2FB /* User.swift */; };
+		CA0C3F9D2BEDED3200D5D2FB /* SwiftfulUI in Frameworks */ = {isa = PBXBuildFile; productRef = CA0C3F9C2BEDED3200D5D2FB /* SwiftfulUI */; };
+		CA0C3FA02BEDED7300D5D2FB /* SwiftfulRouting in Frameworks */ = {isa = PBXBuildFile; productRef = CA0C3F9F2BEDED7300D5D2FB /* SwiftfulRouting */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,11 @@
 		CA0C3F792BECF78E00D5D2FB /* swift-ui-cloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-ui-cloneUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0C3F7D2BECF78E00D5D2FB /* swift_ui_cloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_ui_cloneUITests.swift; sourceTree = "<group>"; };
 		CA0C3F7F2BECF78E00D5D2FB /* swift_ui_cloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_ui_cloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CA0C3F912BECF80E00D5D2FB /* ImageLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderView.swift; sourceTree = "<group>"; };
+		CA0C3F932BECF90500D5D2FB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CA0C3F952BECFB0000D5D2FB /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		CA0C3F972BECFC1E00D5D2FB /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		CA0C3F992BECFCEA00D5D2FB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA0C3F9D2BEDED3200D5D2FB /* SwiftfulUI in Frameworks */,
+				CA0C3FA02BEDED7300D5D2FB /* SwiftfulRouting in Frameworks */,
+				CA0C3F8F2BECF7C900D5D2FB /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +94,7 @@
 				CA0C3F722BECF78D00D5D2FB /* swift-ui-cloneTests */,
 				CA0C3F7C2BECF78E00D5D2FB /* swift-ui-cloneUITests */,
 				CA0C3F602BECF78B00D5D2FB /* Products */,
+				CA0C3F8D2BECF7C900D5D2FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +111,7 @@
 		CA0C3F612BECF78B00D5D2FB /* swift-ui-clone */ = {
 			isa = PBXGroup;
 			children = (
+				CA0C3F902BECF7D800D5D2FB /* Shared */,
 				CA0C3F622BECF78B00D5D2FB /* swift_ui_cloneApp.swift */,
 				CA0C3F642BECF78B00D5D2FB /* ContentView.swift */,
 				CA0C3F662BECF78D00D5D2FB /* Assets.xcassets */,
@@ -127,6 +145,25 @@
 			path = "swift-ui-cloneUITests";
 			sourceTree = "<group>";
 		};
+		CA0C3F8D2BECF7C900D5D2FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA0C3F902BECF7D800D5D2FB /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C3F912BECF80E00D5D2FB /* ImageLoaderView.swift */,
+				CA0C3F932BECF90500D5D2FB /* Constants.swift */,
+				CA0C3F952BECFB0000D5D2FB /* DatabaseHelper.swift */,
+				CA0C3F972BECFC1E00D5D2FB /* Product.swift */,
+				CA0C3F992BECFCEA00D5D2FB /* User.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +180,11 @@
 			dependencies = (
 			);
 			name = "swift-ui-clone";
+			packageProductDependencies = (
+				CA0C3F8E2BECF7C900D5D2FB /* SDWebImageSwiftUI */,
+				CA0C3F9C2BEDED3200D5D2FB /* SwiftfulUI */,
+				CA0C3F9F2BEDED7300D5D2FB /* SwiftfulRouting */,
+			);
 			productName = "swift-ui-clone";
 			productReference = CA0C3F5F2BECF78B00D5D2FB /* swift-ui-clone.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +257,11 @@
 				Base,
 			);
 			mainGroup = CA0C3F562BECF78B00D5D2FB;
+			packageReferences = (
+				CA0C3F8C2BECF7BD00D5D2FB /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				CA0C3F9B2BEDED3200D5D2FB /* XCRemoteSwiftPackageReference "SwiftfulUI" */,
+				CA0C3F9E2BEDED7300D5D2FB /* XCRemoteSwiftPackageReference "SwiftfulRouting" */,
+			);
 			productRefGroup = CA0C3F602BECF78B00D5D2FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +304,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA0C3F922BECF80E00D5D2FB /* ImageLoaderView.swift in Sources */,
+				CA0C3F962BECFB0000D5D2FB /* DatabaseHelper.swift in Sources */,
 				CA0C3F652BECF78B00D5D2FB /* ContentView.swift in Sources */,
 				CA0C3F632BECF78B00D5D2FB /* swift_ui_cloneApp.swift in Sources */,
+				CA0C3F942BECF90500D5D2FB /* Constants.swift in Sources */,
+				CA0C3F982BECFC1E00D5D2FB /* Product.swift in Sources */,
+				CA0C3F9A2BECFCEA00D5D2FB /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +634,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CA0C3F8C2BECF7BD00D5D2FB /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.4;
+			};
+		};
+		CA0C3F9B2BEDED3200D5D2FB /* XCRemoteSwiftPackageReference "SwiftfulUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		CA0C3F9E2BEDED7300D5D2FB /* XCRemoteSwiftPackageReference "SwiftfulRouting" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulRouting.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CA0C3F8E2BECF7C900D5D2FB /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA0C3F8C2BECF7BD00D5D2FB /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		CA0C3F9C2BEDED3200D5D2FB /* SwiftfulUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA0C3F9B2BEDED3200D5D2FB /* XCRemoteSwiftPackageReference "SwiftfulUI" */;
+			productName = SwiftfulUI;
+		};
+		CA0C3F9F2BEDED7300D5D2FB /* SwiftfulRouting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA0C3F9E2BEDED7300D5D2FB /* XCRemoteSwiftPackageReference "SwiftfulRouting" */;
+			productName = SwiftfulRouting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CA0C3F572BECF78B00D5D2FB /* Project object */;
 }
