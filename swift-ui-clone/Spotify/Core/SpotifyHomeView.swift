@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftfulUI
+import SwiftfulRouting
 
 struct SpotifyHomeView: View {
     
@@ -14,6 +15,8 @@ struct SpotifyHomeView: View {
     @State private var selectedCategory: Category? = nil
     @State private var products: [Product] = []
     @State private var productRows: [ProductRow] = []
+    
+    @Environment(\.router) var router
     
     var body: some View {
         ZStack{
@@ -71,7 +74,9 @@ struct SpotifyHomeView: View {
 }
 
 #Preview {
-    SpotifyHomeView()
+    RouterView { _ in
+        SpotifyHomeView()
+    }
 }
 
 extension SpotifyHomeView{
@@ -83,7 +88,7 @@ extension SpotifyHomeView{
                         .background(.spotifyWhite)
                         .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                         .onTapGesture {
-                            
+                            router.dismissScreen()
                         }
                 }
             }
@@ -118,8 +123,20 @@ extension SpotifyHomeView{
                     title: product.title
                 )
                 .asButton(.press) {
+                    goToPlaylistView(product: product)
                 }
             }
+        }
+    }
+    
+    private func goToPlaylistView(product: Product){
+        guard let currentUser else { return }
+        
+        router.showScreen(.push){ _ in
+            SpotifyPlaylistView(
+                product: product,
+                user: currentUser
+            )
         }
     }
     
@@ -134,7 +151,7 @@ extension SpotifyHomeView{
             
             },
             onPlayPressed: {
-//                goToPlaylistView(product: product)
+                goToPlaylistView(product: product)
             }
         )
     }
@@ -158,6 +175,7 @@ extension SpotifyHomeView{
                                 title: product.title
                             )
                             .asButton(.press) {
+                                goToPlaylistView(product: product)
                             }
                         }
                     }
