@@ -32,6 +32,15 @@
 		CA0C3FB52BF088D400D5D2FB /* PlaylistHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3FB42BF088D400D5D2FB /* PlaylistHeaderCell.swift */; };
 		CA0C3FB72BF08D8F00D5D2FB /* PlaylistDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3FB62BF08D8F00D5D2FB /* PlaylistDescriptionCell.swift */; };
 		CA0C3FB92BF1E7D400D5D2FB /* SongRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3FB82BF1E7D400D5D2FB /* SongRowCell.swift */; };
+		CA0C3FBE2BF1FBCD00D5D2FB /* BumbleHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3FBD2BF1FBCD00D5D2FB /* BumbleHomeView.swift */; };
+		CA0C3FC02BF1FE5F00D5D2FB /* BumbleFilterComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3FBF2BF1FE5F00D5D2FB /* BumbleFilterComponent.swift */; };
+		CA0C3FC22BF3B14200D5D2FB /* BumbleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3FC12BF3B14200D5D2FB /* BumbleCardView.swift */; };
+		CA0C3FC42BF64FCF00D5D2FB /* BumbleHeartComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3FC32BF64FCF00D5D2FB /* BumbleHeartComponent.swift */; };
+		CA0C3FC62BF6521200D5D2FB /* InterestPillGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3FC52BF6521200D5D2FB /* InterestPillGridView.swift */; };
+		CA0C3FC82BF6522700D5D2FB /* InterestPillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3FC72BF6522700D5D2FB /* InterestPillView.swift */; };
+		CA0C3FCA2BF7616D00D5D2FB /* BumbleChatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3FC92BF7616D00D5D2FB /* BumbleChatsView.swift */; };
+		CA0C3FCC2BF761A000D5D2FB /* BumbleProfileImageComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3FCB2BF761A000D5D2FB /* BumbleProfileImageComponent.swift */; };
+		CA0C3FCE2BF766D000D5D2FB /* BumbleChatPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0C3FCD2BF766D000D5D2FB /* BumbleChatPreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +86,15 @@
 		CA0C3FB42BF088D400D5D2FB /* PlaylistHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistHeaderCell.swift; sourceTree = "<group>"; };
 		CA0C3FB62BF08D8F00D5D2FB /* PlaylistDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDescriptionCell.swift; sourceTree = "<group>"; };
 		CA0C3FB82BF1E7D400D5D2FB /* SongRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongRowCell.swift; sourceTree = "<group>"; };
+		CA0C3FBD2BF1FBCD00D5D2FB /* BumbleHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumbleHomeView.swift; sourceTree = "<group>"; };
+		CA0C3FBF2BF1FE5F00D5D2FB /* BumbleFilterComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumbleFilterComponent.swift; sourceTree = "<group>"; };
+		CA0C3FC12BF3B14200D5D2FB /* BumbleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumbleCardView.swift; sourceTree = "<group>"; };
+		CA0C3FC32BF64FCF00D5D2FB /* BumbleHeartComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumbleHeartComponent.swift; sourceTree = "<group>"; };
+		CA0C3FC52BF6521200D5D2FB /* InterestPillGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestPillGridView.swift; sourceTree = "<group>"; };
+		CA0C3FC72BF6522700D5D2FB /* InterestPillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestPillView.swift; sourceTree = "<group>"; };
+		CA0C3FC92BF7616D00D5D2FB /* BumbleChatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumbleChatsView.swift; sourceTree = "<group>"; };
+		CA0C3FCB2BF761A000D5D2FB /* BumbleProfileImageComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumbleProfileImageComponent.swift; sourceTree = "<group>"; };
+		CA0C3FCD2BF766D000D5D2FB /* BumbleChatPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumbleChatPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +153,7 @@
 				CA0C3F622BECF78B00D5D2FB /* swift_ui_cloneApp.swift */,
 				CA0C3F642BECF78B00D5D2FB /* ContentView.swift */,
 				CA0C3FA12BEDF81F00D5D2FB /* Spotify */,
+				CA0C3FBA2BF1F98C00D5D2FB /* Bumble */,
 				CA0C3F662BECF78D00D5D2FB /* Assets.xcassets */,
 				CA0C3F682BECF78D00D5D2FB /* Preview Content */,
 			);
@@ -224,6 +243,38 @@
 				CA0C3FAA2BEDFFA200D5D2FB /* Category.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CA0C3FBA2BF1F98C00D5D2FB /* Bumble */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C3FBC2BF1F9B300D5D2FB /* Core */,
+				CA0C3FBB2BF1F9A800D5D2FB /* Component */,
+			);
+			path = Bumble;
+			sourceTree = "<group>";
+		};
+		CA0C3FBB2BF1F9A800D5D2FB /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C3FBF2BF1FE5F00D5D2FB /* BumbleFilterComponent.swift */,
+				CA0C3FC12BF3B14200D5D2FB /* BumbleCardView.swift */,
+				CA0C3FC32BF64FCF00D5D2FB /* BumbleHeartComponent.swift */,
+				CA0C3FC52BF6521200D5D2FB /* InterestPillGridView.swift */,
+				CA0C3FC72BF6522700D5D2FB /* InterestPillView.swift */,
+				CA0C3FCB2BF761A000D5D2FB /* BumbleProfileImageComponent.swift */,
+				CA0C3FCD2BF766D000D5D2FB /* BumbleChatPreview.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		CA0C3FBC2BF1F9B300D5D2FB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CA0C3FBD2BF1FBCD00D5D2FB /* BumbleHomeView.swift */,
+				CA0C3FC92BF7616D00D5D2FB /* BumbleChatsView.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,22 +418,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA0C3F922BECF80E00D5D2FB /* ImageLoaderView.swift in Sources */,
+				CA0C3FCC2BF761A000D5D2FB /* BumbleProfileImageComponent.swift in Sources */,
 				CA0C3FAB2BEDFFA200D5D2FB /* Category.swift in Sources */,
 				CA0C3FA72BEDFD4700D5D2FB /* SpotifyCategoryCell.swift in Sources */,
+				CA0C3FC22BF3B14200D5D2FB /* BumbleCardView.swift in Sources */,
 				CA0C3F962BECFB0000D5D2FB /* DatabaseHelper.swift in Sources */,
+				CA0C3FC62BF6521200D5D2FB /* InterestPillGridView.swift in Sources */,
+				CA0C3FBE2BF1FBCD00D5D2FB /* BumbleHomeView.swift in Sources */,
+				CA0C3FC42BF64FCF00D5D2FB /* BumbleHeartComponent.swift in Sources */,
 				CA0C3FB52BF088D400D5D2FB /* PlaylistHeaderCell.swift in Sources */,
+				CA0C3FC02BF1FE5F00D5D2FB /* BumbleFilterComponent.swift in Sources */,
 				CA0C3FA52BEDF84B00D5D2FB /* SpotifyHomeView.swift in Sources */,
 				CA0C3F652BECF78B00D5D2FB /* ContentView.swift in Sources */,
 				CA0C3F632BECF78B00D5D2FB /* swift_ui_cloneApp.swift in Sources */,
 				CA0C3FB32BEF5A3F00D5D2FB /* SpotifyPlaylistView.swift in Sources */,
 				CA0C3F942BECF90500D5D2FB /* Constants.swift in Sources */,
+				CA0C3FC82BF6522700D5D2FB /* InterestPillView.swift in Sources */,
 				CA0C3FAF2BEF4A1300D5D2FB /* SpotifyNewReleasedCell.swift in Sources */,
 				CA0C3FAD2BEE22EE00D5D2FB /* SpotifyRecentCell.swift in Sources */,
 				CA0C3F982BECFC1E00D5D2FB /* Product.swift in Sources */,
 				CA0C3FB12BEF544B00D5D2FB /* ImageTitleCell.swift in Sources */,
 				CA0C3FB92BF1E7D400D5D2FB /* SongRowCell.swift in Sources */,
+				CA0C3FCA2BF7616D00D5D2FB /* BumbleChatsView.swift in Sources */,
 				CA0C3FB72BF08D8F00D5D2FB /* PlaylistDescriptionCell.swift in Sources */,
 				CA0C3F9A2BECFCEA00D5D2FB /* User.swift in Sources */,
+				CA0C3FCE2BF766D000D5D2FB /* BumbleChatPreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
