@@ -22,6 +22,8 @@ struct BumbleHomeView: View {
                 BumbleFilterComponent(options: options, selection: $selectionFilter)
                     .background(Divider(), alignment: .bottom)
                 
+                BumbleCardView()
+                
                 Spacer()
             }
             .padding(8)
