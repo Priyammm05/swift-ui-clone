@@ -34,8 +34,8 @@ struct User: Codable, Identifiable {
         [
             UserInterest(iconName: "ruler", emoji: nil, text: "\(height)"),
             UserInterest(iconName: "graduationcap", emoji: nil, text: education),
-            UserInterest(iconName: "wineglass", emoji: nil, text: "Socially"),
-            UserInterest(iconName: "moon.stars.fill", emoji: nil, text: "Virgo"),
+            UserInterest(iconName: "wineglass", emoji: nil, text: "Never"),
+            UserInterest(iconName: "moon.stars.fill", emoji: nil, text: "Libra"),
         ]
     }
     var interests: [UserInterest] {
