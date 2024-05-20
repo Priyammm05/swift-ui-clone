@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftfulUI
 
 struct NetflixHomeView: View {
     
@@ -22,42 +23,11 @@ struct NetflixHomeView: View {
         ZStack(alignment: .top){
             Color.netflixBlack.ignoresSafeArea()
             
-            ScrollView(.vertical){
-                VStack(spacing: 8){
-                    Rectangle()
-                        .opacity(0)
-                        .frame(height: fullHeaderSize.height)
-                    
-                    if let heroProduct{
-                        heroCell(product: heroProduct)
-                        .padding(.top, 26)
-                    }
-                    
-                    categoryRows
-                }
-            }
-            .scrollIndicators(.hidden)
+            backgroundGradientLayer
             
-            VStack(spacing: 0){
-                header
-                    .padding(.horizontal, 16)
-                
-                NetflixFilterBarComponent(
-                    filters: filters,
-                    selectedFilter: selectedFilter,
-                    onFilterPressed: { newFilter in
-                        selectedFilter = newFilter
-                    },
-                    onXmarkPressed: {
-                        selectedFilter = nil
-                    }
-                )
-                .padding(.top, 16)
-                .readingFrame { frame in
-                    fullHeaderSize = frame.size
-                }
-                
-            }
+            scrollViewLayer
+            
+            fullHeaderWithFilter
         }
         .foregroundStyle(.netflixWhite)
         .task {
@@ -83,6 +53,77 @@ struct NetflixHomeView: View {
             productRows = rows
         } catch {
             
+        }
+    }
+    
+    private var backgroundGradientLayer: some View{
+        ZStack{
+            LinearGradient(colors: [.netflixDarkGray.opacity(1), .netflixDarkGray.opacity(0)], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+            
+            LinearGradient(colors: [.netflixDarkRed.opacity(0.5), .netflixDarkRed.opacity(0)], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+        }
+        .frame(maxHeight: max(10, (400 + (scrollViewOffset * 0.75))))
+        .opacity(scrollViewOffset < -250 ? 0 : 1)
+        .animation(.easeInOut, value: scrollViewOffset)
+    }
+    
+    private var scrollViewLayer: some View{
+        ScrollViewWithOnScrollChanged {
+            VStack(spacing: 8){
+                Rectangle()
+                    .opacity(0)
+                    .frame(height: fullHeaderSize.height)
+                
+                if let heroProduct{
+                    heroCell(product: heroProduct)
+                }
+                
+                categoryRows
+            }
+        } onScrollChanged: { offset in
+            scrollViewOffset = min(0, offset.y)
+        }
+    }
+    
+    private var fullHeaderWithFilter: some View {
+        VStack(spacing: 0) {
+            header
+                .padding(.horizontal, 16)
+            
+            if scrollViewOffset > -30 {
+                NetflixFilterBarComponent(
+                    filters: filters,
+                    selectedFilter: selectedFilter,
+                    onFilterPressed: { newFilter in
+                        selectedFilter = newFilter
+                    },
+                    onXmarkPressed: {
+                        selectedFilter = nil
+                    }
+                )
+                .padding(.top, 16)
+                .transition(.move(edge: .top).combined(with: .opacity))
+            }
+        }
+        .padding(.bottom, 8)
+        .background(
+            ZStack {
+                if scrollViewOffset < -70 {
+                    Rectangle()
+                        .fill(Color.clear)
+                        .background(.ultraThinMaterial)
+                        .brightness(-0.2)
+                        .ignoresSafeArea()
+                }
+            }
+        )
+        .animation(.smooth, value: scrollViewOffset)
+        .readingFrame { frame in
+            if fullHeaderSize == .zero {
+                fullHeaderSize = frame.size
+            }
         }
     }
     
