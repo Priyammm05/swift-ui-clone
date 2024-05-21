@@ -7,8 +7,11 @@
 
 import SwiftUI
 import SwiftfulUI
+import SwiftfulRouting
 
 struct NetflixHomeView: View {
+    
+    @Environment(\.router) var router
     
     @State private var filters = FilterModel.mockArray
     @State private var selectedFilter: FilterModel? = nil
@@ -47,7 +50,6 @@ struct NetflixHomeView: View {
             var rows: [ProductRow] = []
             let allBrands = Set(products.map({ $0.brand }))
             for brand in allBrands {
-//                let products = self.products.filter({ $0.brand == brand })
                 rows.append(ProductRow(title: brand.capitalized, products: products.shuffled()))
             }
             productRows = rows
@@ -55,6 +57,12 @@ struct NetflixHomeView: View {
             
         }
     }
+    
+    private func onProductPressed(product: Product) {
+          router.showScreen(.sheet) { _ in
+              NetflixDetailView(product: product)
+          }
+      }
     
     private var backgroundGradientLayer: some View{
         ZStack{
@@ -132,6 +140,9 @@ struct NetflixHomeView: View {
             Text("For Priyam")
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                .onTapGesture {
+                    router.dismissScreen()
+                }
             
             HStack(spacing: 16){
                 Image(systemName: "tv.badge.wifi")
@@ -155,10 +166,10 @@ struct NetflixHomeView: View {
             title: product.title,
             categories: [product.category.capitalized, product.brand],
             onBackgroundPressed: {
-                
+                onProductPressed(product: product)
             },
             onPlayPressed: {
-                
+                onProductPressed(product: product)
             },
             onMyListPressed: {
                 
@@ -185,7 +196,7 @@ struct NetflixHomeView: View {
                                     topTenRanking: rowIndex == 1 ? (index + 1) : nil
                                 )
                                 .onTapGesture {
-//                                    onProductPressed(product: product)
+                                    onProductPressed(product: product)
                                 }
                             }
                         }
@@ -200,5 +211,7 @@ struct NetflixHomeView: View {
 }
 
 #Preview {
-    NetflixHomeView()
+    RouterView { _ in
+        NetflixHomeView()
+    }
 }
